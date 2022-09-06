@@ -17,7 +17,6 @@ namespace SortingApplication
                 int swapped = selector.Sort(algorithm, array);
                 Console.WriteLine($"sorting done using {algorithm}, needed {swapped} swaps to sort the array");
             }
-
             Console.ReadKey();
         }
     }
