@@ -1,6 +1,6 @@
 ﻿namespace SortingApplication
 {
-    public class QuickSort
+    public class QuickSort : ISort
     {
         public int NumberOfSwaps { get; set; } = 0;
         public int Sort(int[] array)

@@ -4,24 +4,11 @@
     {
         public int Sort(SortingAlgorithm algorithm, int[] array)
         {
-            BubbleSort bubbleSort = new BubbleSort();
-            ShakerSort shakerSort = new ShakerSort();
-            QuickSort quickSort = new QuickSort();
+            SorterFactory factory = new SorterFactory();
 
-            switch (algorithm)
-            {
-                case SortingAlgorithm.BubbleSort:
-                    return bubbleSort.Sort(array);
+            ISort sorter = factory.CreateSorter(algorithm);
 
-                case SortingAlgorithm.ShakerSort:
-                    return shakerSort.Sort(array);
-
-                case SortingAlgorithm.QuickSort:
-                    return quickSort.Sort(array);
-
-                default:
-                    return 0;
-            }
+            return sorter.Sort(array);
         }
     }
 }
