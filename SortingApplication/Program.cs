@@ -4,7 +4,9 @@
     {
         private static void Main(string[] args)
         {
-            SortingAlgorithmTester tester = new SortingAlgorithmTester();
+            SorterFactory factory = new SorterFactory();
+            SorterSelector sorterSelector = new SorterSelector(factory);
+            SortingAlgorithmTester tester = new SortingAlgorithmTester(sorterSelector);
             tester.Test();
         }
     }
